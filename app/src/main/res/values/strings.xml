@@ -1,0 +1,39 @@
+<resources>
+    <string name="AD_Killer">AD Killer</string>
+    <string name="app_name">AD Killer</string>
+    <string name="title_home">状态</string>
+    <string name="title_settings">设置</string>
+    <string name="title_about">关于</string>
+    <string name="status_title">服务状态</string>
+    <string name="text_instructions">\"AD Killer\"基于安卓系统的无障碍服务来实现跳过自动广告功能，开源不联网，绝对安全！为了保证程序能正常工作，请检查以下设置：</string>
+    <string name="text_accessibility_permission">1、请在\"无障碍\"设置里，打开\"AD Killer - 无障碍服务\"。</string>
+    <string name="text_optional_hint">-- 以下两项为建议设置 --</string>
+    <string name="text_power_permission">2、请在\"电池优化\"设置里，设置\"AD Killer\"为\"不优化\"。</string>
+    <string name="text_task_manager">3、请在\"任务管理\"里，锁定\"AD Killer\"。</string>
+    <string name="text_status_help">如有问题，请访问网址:</string>
+    <string name="text_status_weblink">https://www.baidu.com</string>
+
+    <string name="button_setting">设置</string>
+    <string name="ad_killer_service_label">AD Killer-无障碍服务</string>
+    <string name="ad_killer_service_description">\"AD Killer\"是基于安卓系统的无障碍服务来实现自动跳过广告功能的，为了保证程序能正常工作，打开此服务。\n\n本程序为开源程序，不需要网络权限，不会收集或上传任何个人信息，请放心使用！</string>
+    <string name="about_app_introduction">
+        \"AD Killer\"可以帮助用户自动跳过一些应用的开屏广告，基于Android的无障碍服务实现。
+        \n\n程序可以使用三种方法跳过开屏广告：
+        \n\n1. 关键字。在应用中查找含有关键字的按钮，如果发现了对应的按钮，自动帮用户点击从而跳过广告；
+        \n2. 应用里的指定控件。当应用工作时，自动查找对应的控件，如果找到则自动点击；
+        \n3. 应用里的指定位置。当应用工作时，自动 点击对应的区域。
+        \n\n上述三种方法可以在\"设置\"里做具体设置。
+        \n\n详细信息，请访问网站:
+    </string>
+
+    <string name="about_weblink">https://www.baidu.com/</string>
+
+    <string name="some_about">这里有一些说明</string>
+
+    <string name="app_version">版本: %s (%d)</string>
+
+    <string name="serviceOpen">服务已开启</string>
+    <string name="serviceClose">服务已关闭</string>
+
+
+</resources>
