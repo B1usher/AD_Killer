@@ -49,29 +49,29 @@ public class HomeFragment extends Fragment {
 
 
         //        // 以下
-        final Switch aSwitch = (Switch) root.findViewById(R.id.s_v);
-//        aSwitch.setChecked(true);
-//        aSwitch.setText(R.string.serviceOpen);
-//        aSwitch.setSwitchTextAppearance(MainActivity.this,R.style.s_false);
-        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-//                Intent intent = new Intent(MainActivity.this, ADKillerService.class);
-                if (b) {
-                    aSwitch.setText(R.string.serviceOpen);
-//                    bt = (ADKillerService.serviceImpl != null);
-//                    aSwitch.setSwitchTextAppearance(MainActivity.this,R.style.s_true);
-//                    startService(intent);
-                }else {
-                    aSwitch.setText(R.string.serviceClose);
-//                    bt = false;
-//                    aSwitch.setSwitchTextAppearance(MainActivity.this,R.style.s_false);
-//                    intent.putExtra("tryDisable",true);
-//                    startService(intent);
-//                    stopService(intent);
-                }
-            }
-        });
+//        final Switch aSwitch = (Switch) root.findViewById(R.id.s_v);
+////        aSwitch.setChecked(true);
+////        aSwitch.setText(R.string.serviceOpen);
+////        aSwitch.setSwitchTextAppearance(MainActivity.this,R.style.s_false);
+//        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+////                Intent intent = new Intent(MainActivity.this, ADKillerService.class);
+//                if (b) {
+//                    aSwitch.setText(R.string.serviceOpen);
+////                    bt = (ADKillerService.serviceImpl != null);
+////                    aSwitch.setSwitchTextAppearance(MainActivity.this,R.style.s_true);
+////                    startService(intent);
+//                }else {
+//                    aSwitch.setText(R.string.serviceClose);
+////                    bt = false;
+////                    aSwitch.setSwitchTextAppearance(MainActivity.this,R.style.s_false);
+////                    intent.putExtra("tryDisable",true);
+////                    startService(intent);
+////                    stopService(intent);
+//                }
+//            }
+//        });
 //        checkServiceStatus();
 //        // 以上
 
