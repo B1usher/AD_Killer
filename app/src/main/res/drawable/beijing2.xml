@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- table 背景色 -->
+    <solid android:color="#CFCACA"></solid>
+    <!-- table 边框圆角(上下左右四个角都是圆角，如果想单独设置topLeftRadius、topRightRadius、bottomLeftRadius、bottomRightRadius) -->
+    <corners android:radius="15dip"/>
+    <!-- table 边框颜色和宽度 -->
+</shape>

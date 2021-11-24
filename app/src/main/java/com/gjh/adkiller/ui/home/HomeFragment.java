@@ -26,6 +26,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.gjh.adkiller.ADKillerService;
 import com.gjh.adkiller.R;
+import com.gjh.adkiller.Utilities;
 
 public class HomeFragment extends Fragment {
 
@@ -84,6 +85,7 @@ public class HomeFragment extends Fragment {
             public void onChanged(Boolean aBoolean) {
                 if(aBoolean) {
                     imageAccessibilityPermission.setImageDrawable(drawableYes);
+                    Utilities.toast("服务已开启");
                 } else {
                     imageAccessibilityPermission.setImageDrawable(drawableNo);
                 }

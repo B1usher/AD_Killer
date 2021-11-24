@@ -1,13 +1,13 @@
 package com.gjh.adkiller;
 
 public class PackagePositionDescription {
-    public String packageName;
-    public String activityName;
-    public int x;
-    public int y;
-    public int delay;
-    public int period;
-    public int number;
+    public String packageName;      // 包名
+    public String activityName;     // 活动名
+    public int x;                   // x坐标
+    public int y;                   // y坐标
+    public int delay;               // 延迟
+    public int period;              // 时期
+    public int number;              // 数量
 
     public PackagePositionDescription() {
         this.packageName = "";

@@ -10,14 +10,14 @@ public class PackageWidgetDescription {
     public boolean clickable, onlyClick;
 
     public PackageWidgetDescription() {
-        this.packageName = "";
-        this.activityName = "";
-        this.className = "";
-        this.idName = "";
-        this.description = "";
-        this.text = "";
-        this.position = new Rect();
-        this.clickable = false;
+        this.packageName = "";          // 包名
+        this.activityName = "";         // 活动名
+        this.className = "";            // 类名
+        this.idName = "";               // id名
+        this.description = "";          // 描述
+        this.text = "";                 // 文本
+        this.position = new Rect();     // 位置
+        this.clickable = false;         // 可点击
         this.onlyClick = false;
     }
 

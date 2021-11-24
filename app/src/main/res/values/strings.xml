@@ -1,7 +1,7 @@
 <resources>
     <string name="AD_Killer">AD Killer</string>
     <string name="app_name">AD Killer</string>
-    <string name="title_home">状态</string>
+    <string name="title_home">主页</string>
     <string name="title_settings">设置</string>
     <string name="title_about">关于</string>
     <string name="status_title">服务状态</string>
@@ -15,7 +15,7 @@
 
     <string name="button_setting">设置</string>
     <string name="ad_killer_service_label">AD Killer-无障碍服务</string>
-    <string name="ad_killer_service_description">\"AD Killer\"是基于安卓系统的无障碍服务来实现自动跳过广告功能的，为了保证程序能正常工作，打开此服务。\n\n本程序为开源程序，不需要网络权限，不会收集或上传任何个人信息，请放心使用！</string>
+    <string name="ad_killer_service_description">\t\t\t\t\t\"AD Killer\"是基于安卓系统的无障碍服务来实现自动跳过广告功能的，为了保证程序能正常工作，打开此服务。\n\n\t\t\t\t\t\t此程序为开源程序，不需要网络权限，不会收集或上传任何个人信息，请放心使用！</string>
     <string name="about_app_introduction">
         \"AD Killer\"可以帮助用户自动跳过一些应用的开屏广告，基于Android的无障碍服务实现。
         \n\n程序可以使用三种方法跳过开屏广告：
@@ -28,13 +28,14 @@
 
     <string name="about_weblink">https://www.baidu.com/</string>
 
-    <string name="some_about">这里有一些说明</string>
+    <string name="some_about">说明</string>
 <!--    <string name="some_about">授予权限并任务管理中锁定后即可正常使用</string>-->
 
     <string name="app_version">版本: %s (%d)</string>
 
     <string name="serviceOpen">服务已开启</string>
     <string name="serviceClose">服务已关闭</string>
+    <string name="tishi">授权即可开启服务</string>
 
 
 </resources>

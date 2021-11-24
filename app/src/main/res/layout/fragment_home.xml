@@ -75,6 +75,18 @@
 <!--        app:layout_constraintStart_toStartOf="@id/logo"-->
 <!--        app:layout_constraintTop_toBottomOf="@id/ADKiller" />-->
 
+<!--    <TextView-->
+<!--        android:id="@+id/tishi"-->
+<!--        android:text="@string/tishi"-->
+<!--        android:layout_marginTop="80dp"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textColor="#454444"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/ADKiller"-->
+<!--        app:layout_constraintStart_toStartOf="@id/ADKiller"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/ADKiller" />-->
+
     <TableLayout
         android:id="@+id/tablelayout"
         android:layout_width="match_parent"

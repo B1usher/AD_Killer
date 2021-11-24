@@ -83,14 +83,14 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = super.onCreateView(inflater, container, savedInstanceState);
 
-        // get the height of BottomNavigationView
+        // 获取BottomNavigationView的高度
         int resourceId = getResources().getIdentifier("design_bottom_navigation_height", "dimen", getActivity().getPackageName());
         int height = 147;
         if (resourceId > 0) {
             height = getResources().getDimensionPixelSize(resourceId);
         }
 
-        // set bottom padding for the preference fragment, so that all parts could be shown properly
+        // 为首选项片段设置底部填充，以便可以正确显示所有部分
         view.setPadding(view.getPaddingLeft(), view.getPaddingTop(), view.getPaddingRight(), view.getPaddingBottom() + height);
         return view;
     }
@@ -130,7 +130,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         }
 
 
-        // key words to detect skip-ad button
+        // 检测跳过广告按钮的关键字
         EditTextPreference textKeyWords = findPreference("setting_key_words");
         if(textKeyWords != null) {
             textKeyWords.setText(mSetting.getKeyWordsAsString());
@@ -140,7 +140,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                     String text = newValue.toString();
                     mSetting.setKeyWordList(text);
 
-                    // notify accessibility to refresh packages
+                    // 通知可访问性以刷新包
                     if (ADKillerService.serviceImpl != null) {
                         ADKillerService.serviceImpl.receiverHandler.sendEmptyMessage(ADKillerService.ACTION_REFRESH_KEYWORDS);
                     }
@@ -150,13 +150,13 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             });
         }
 
-        // select packages to be whitelisted
+        // 选择要列入白名单的包
         Preference whitelist = findPreference("setting_whitelist");
         if(whitelist != null) {
             whitelist.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
-                    // find all packages
+                    // 查找所有包
                     List<String> list = new ArrayList<>();
                     Intent intent = new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_LAUNCHER);
                     List<ResolveInfo> ResolveInfoList = packageManager.queryIntentActivities(intent, PackageManager.MATCH_ALL);
@@ -165,7 +165,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                         list.add(e.activityInfo.packageName);
                     }
 
-                    // generate AppInformation for packages
+                    // 为包生成AppInformation
                     final ArrayList<AppInformation> listApp = new ArrayList<>();
                     Set<String> pkgWhitelist = mSetting.getWhitelistPackages();
                     for (String pkgName : list) {
@@ -217,7 +217,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                         }
                     };
 
-                    // inflate the dialog view
+                    // 膨胀对话框视图
                     View viewAppList = inflater.inflate(R.layout.layout_select_packages, null);
                     ListView listView = viewAppList.findViewById(R.id.listView);
                     listView.setAdapter(baseAdapter);
@@ -250,7 +250,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                         btConfirm.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                // save checked packages
+                                // 保存已检查的包
                                 Set<String> pkgWhitelist = new HashSet<>();
                                 for(AppInformation app: listApp) {
                                     if(app.isChecked) {
@@ -259,7 +259,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                                 }
                                 mSetting.setWhitelistPackages(pkgWhitelist);
 
-                                // notify accessibility to refresh packages
+                                // 通知可访问性以刷新包
                                 if (ADKillerService.serviceImpl != null) {
                                     ADKillerService.serviceImpl.receiverHandler.sendEmptyMessage(ADKillerService.ACTION_REFRESH_PACKAGE);
                                 }
@@ -325,7 +325,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             });
         }
 
-        // let user to customize skip-ad button or position for package
+        // 让用户自定义跳过广告按钮或包的位置
         Preference activity_customization = findPreference("setting_activity_customization");
         if(activity_customization != null) {
             activity_customization.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
@@ -341,7 +341,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             });
         }
 
-        // manage saved activity widgets
+        // 管理保存的活动小部件
         activity_widgets = (MultiSelectListPreference) findPreference("setting_activity_widgets");
         mapActivityWidgets = Settings.getInstance().getPackageWidgets();
         updateMultiSelectListPreferenceEntries(activity_widgets, mapActivityWidgets.keySet());
@@ -351,17 +351,17 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 HashSet<String> results = (HashSet<String>) newValue;
 //                Log.d(TAG, "size " + results.size());
 
-                // update activity widgets
+                // 更新活动小部件
                 Set<String> keys = new HashSet<>(mapActivityWidgets.keySet());
                 for(String key: keys){
                     if(!results.contains(key)) {
-                        // this key is not selected to keep, remove the entry
+                        // 未选择保留此密钥，请删除该条目
                         mapActivityWidgets.remove(key);
                     }
                 }
                 Settings.getInstance().setPackageWidgets(mapActivityWidgets);
 
-                // refresh MultiSelectListPreference
+                // Refesh多选列表首选项
                 updateMultiSelectListPreferenceEntries(activity_widgets, mapActivityWidgets.keySet());
 
                 // send message to accessibility service
@@ -374,7 +374,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         });
 
 
-        // advanced method to manage "customized package widgets", by editing the raw setting
+        // 通过编辑原始设置管理“定制包小部件”的高级方法
         Preference package_widgets_advance = findPreference("setting_activity_widgets_advanced");
         if(package_widgets_advance != null) {
             package_widgets_advance.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
@@ -390,7 +390,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
 
 
-            // manage saved activity positions
+            // 管理保存的活动位置
         activity_positions = (MultiSelectListPreference) findPreference("setting_activity_positions");
         mapActivityPositions = Settings.getInstance().getPackagePositions();
         updateMultiSelectListPreferenceEntries(activity_positions, mapActivityPositions.keySet());
@@ -438,7 +438,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     public void onResume() {
         super.onResume();
 
-        // these values might be changed by adding new widget or positions, update entries for these two multipeline 这些值可以通过添加新的小部件或位置、更新这两个多线的条目来更改
+        // 这些值可以通过添加新的小部件或位置、更新这两个多线的条目来更改
         mapActivityWidgets = Settings.getInstance().getPackageWidgets();
         updateMultiSelectListPreferenceEntries(activity_widgets, mapActivityWidgets.keySet());
 

@@ -102,10 +102,7 @@ public class ManagePackageWidgetsDialogFragment extends DialogFragment {
             btRules.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    String url = "http://www.baidu.com";
-                    Intent i = new Intent(Intent.ACTION_VIEW);
-                    i.setData(Uri.parse(url));
-                    startActivity(i);
+                    Utilities.toast("敬请期待");
                 }
             });
         }

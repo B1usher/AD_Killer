@@ -2,13 +2,13 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory app:title="基本设置">
+    <PreferenceCategory app:title="基础设置">
 
         <CheckBoxPreference
             app:icon="@drawable/ic_notification"
             app:key="skip_ad_notification"
             app:summaryOff="不显示通知"
-            app:summaryOn="显示跳过通知"
+            app:summaryOn="显示通知"
             app:title="跳过广告时显示通知" />
 
         <SeekBarPreference
@@ -24,10 +24,10 @@
 
         <EditTextPreference
             app:key="setting_key_words"
-            app:title="跳过广告按钮的关键字"
+            app:title="设置跳过关键字"
             app:icon="@drawable/ic_keyword"
             app:useSimpleSummaryProvider="true"
-            app:dialogTitle="设置跳过广告按钮的关键字\n多个关键字请以空格分隔"/>
+            app:dialogTitle="设置跳过的关键字\n多个关键字请以空格分隔"/>
 
         <Preference
             app:key="setting_whitelist"
@@ -37,19 +37,28 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="高级设置">
+    <PreferenceCategory app:title="自定义规则设置">
 
         <Preference
             app:key="setting_activity_customization"
             app:icon="@drawable/ic_target"
-            app:summary="手动添加程序的跳过按钮或者跳过区域"
+            app:summary="手动添加程序的跳过按钮或者跳过坐标"
             app:title="添加程序的跳过方法" />
 
         <MultiSelectListPreference
             app:key="setting_activity_widgets"
             app:icon="@drawable/ic_activity_widget"
-            app:title="管理已添加按钮的程序"
-            app:summary="保留或者删除已添加跳过按钮的程序"
+            app:title="管理已添加按钮控件的程序"
+            app:summary="保留或者删除通过控件跳过的程序"
+            app:entries="@array/empty_entries"
+            app:entryValues="@array/empty_entries"
+            app:dialogTitle="勾选要保留的程序"/>
+
+        <MultiSelectListPreference
+            app:key="setting_activity_positions"
+            app:icon="@drawable/ic_activity_position"
+            app:title="管理已添加按钮坐标的程序"
+            app:summary="保留或者删除通过坐标跳过的程序"
             app:entries="@array/empty_entries"
             app:entryValues="@array/empty_entries"
             app:dialogTitle="勾选要保留的程序"/>
@@ -60,25 +69,6 @@
             app:summary="手动编辑规则"
             app:title="导入/导出程序按钮跳过的规则" />
 
-        <MultiSelectListPreference
-            app:key="setting_activity_positions"
-            app:icon="@drawable/ic_activity_position"
-            app:title="管理已添加区域的程序"
-            app:summary="保留或者删除已添加跳过区域的程序"
-            app:entries="@array/empty_entries"
-            app:entryValues="@array/empty_entries"
-            app:dialogTitle="勾选要保留的程序"/>
-
-        <Preference
-            app:summary="点击查看使用说明"
-            app:icon="@drawable/ic_manual"
-            app:title="高级设置说明">
-
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="http://www.baidu.com" />
-
-        </Preference>
 
     </PreferenceCategory>
 
