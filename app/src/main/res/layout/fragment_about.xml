@@ -46,21 +46,32 @@
         android:layout_height="wrap_content"
         android:text="@string/ad_killer_service_description"
         android:textSize="20sp"
-        android:layout_marginTop="80dp"
         android:textColor="@color/titleColor"
+        app:layout_constraintBottom_toTopOf="@id/textView_version"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/about_title"/>
+
 
     <TextView
         android:id="@+id/textView_version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:text="TextView"
+        android:layout_marginBottom="70dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/some_about" />
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView_version"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:text="TextView"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/some_about" />-->
 
 <!--    <TextView-->
 <!--        android:id="@+id/textView_app_introduction"-->

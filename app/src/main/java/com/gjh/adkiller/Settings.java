@@ -7,6 +7,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.gjh.AD_Killer;
 import com.google.gson.Gson;
@@ -197,5 +198,16 @@ public class Settings {
         mEditor.putString(PACKAGE_POSITIONS, json);
         mEditor.apply();
     }
+
+//    // 总的跳过次数
+//    private static final String SKIP_NUM = "SKIP_NUM";
+//    private int skipNum = 0;
+//    public void setSkipNum() {
+//        skipNum = skipNum + 1;
+//    }
+//    public int getSkipNum() {
+//        return skipNum;
+//    }
+
 
 }

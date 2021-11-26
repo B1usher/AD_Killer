@@ -49,6 +49,20 @@
         app:layout_constraintTop_toBottomOf="@id/logo" />
 
 <!--    <TextView-->
+<!--        android:id="@+id/skipNum"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:textAlignment="center"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="25dp"-->
+<!--        android:text="0"-->
+<!--        android:textColor="@color/titleColor"-->
+<!--        android:textSize="25sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/ADKiller"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/tablelayout"/>-->
+
+<!--    <TextView-->
 <!--        android:id="@+id/ADKiller"-->
 <!--        android:layout_width="0dp"-->
 <!--        android:textAlignment="center"-->
@@ -87,16 +101,19 @@
 <!--        app:layout_constraintStart_toStartOf="@id/ADKiller"-->
 <!--        app:layout_constraintTop_toBottomOf="@id/ADKiller" />-->
 
+<!--    android:layout_marginTop="200dp"-->
+<!--    app:layout_constraintTop_toBottomOf="@+id/ADKiller"-->
+
     <TableLayout
         android:id="@+id/tablelayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="200dp"
+        android:layout_marginBottom="70dp"
 
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ADKiller">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TableRow
             android:padding="5dp"
@@ -380,19 +397,19 @@
     <!--        app:layout_constraintStart_toStartOf="parent"-->
     <!--        app:layout_constraintTop_toBottomOf="@+id/tablelayout" />-->
 
-    <!--    <TextView-->
-    <!--        android:id="@+id/tv_status_weblink"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginStart="16dp"-->
-    <!--        android:layout_marginTop="8dp"-->
-    <!--        android:layout_marginEnd="16dp"-->
-    <!--        android:autoLink="web"-->
-    <!--        android:text="@string/text_status_weblink"-->
-    <!--        android:textSize="16sp"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/tv_status_help" />-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_status_weblink"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:autoLink="web"-->
+<!--            android:text="@string/text_status_weblink"-->
+<!--            android:textSize="16sp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tv_status_help" />-->
 
 
 

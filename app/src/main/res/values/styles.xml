@@ -5,6 +5,12 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+
+        <item name="android:windowBackground">@drawable/dialog_background</item>  <!-- 窗口背景 -->
+        <item name="android:focusable">false</item>
+        <item name="android:colorBackgroundCacheHint">#00000000</item> <!-- 背景缓存色透明，避免拖动全黑 -->
+
     </style>
 
     <style name="s_true" parent="@android:style/TextAppearance.Small">
@@ -14,5 +20,7 @@
     <style name="s_false" parent="@android:style/TextAppearance.Small">
         <item name="android:textColor">#9b9b9b</item>
     </style>
+
+
 
 </resources>

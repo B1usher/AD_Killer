@@ -16,6 +16,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
@@ -32,10 +33,12 @@ public class HomeFragment extends Fragment {
 
     private final String TAG = getClass().getName();
     private HomeViewModel homeViewModel;
-
+    private int skipNumber;
 
 //      以下
 //    private boolean bt;
+
+
 //    // 以上
 
 
@@ -50,6 +53,13 @@ public class HomeFragment extends Fragment {
 
 
         //        // 以下
+
+
+
+//        TextView tvSkipNum = root.findViewById(R.id.skipNum);
+//        skipNumber=Settings.
+//        tvSkipNum.setText(skipNumber);
+
 //        final Switch aSwitch = (Switch) root.findViewById(R.id.s_v);
 ////        aSwitch.setChecked(true);
 ////        aSwitch.setText(R.string.serviceOpen);
