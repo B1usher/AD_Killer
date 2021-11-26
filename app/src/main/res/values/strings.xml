@@ -15,7 +15,7 @@
 
     <string name="button_setting">设置</string>
     <string name="ad_killer_service_label">AD Killer-无障碍服务</string>
-    <string name="ad_killer_service_description">\t\t\t\t\t\"AD Killer\"是基于无障碍服务来实现自动跳过广告功能，为了保证程序能正常工作，请打开无障碍服务。\n\n\t\t\t\t\t\t此程序为开源程序，不需要网络权限，不会收集或上传任何个人信息，请放心使用！</string>
+    <string name="ad_killer_service_description">\t\t\t\t\t\"AD Killer\"是基于无障碍服务来实现自动跳过广告功能，为了保证程序能正常工作，请打开无障碍服务。\n\n\t\t\t\t\t\t为保证进程不被清理，请在\"电池优化\"中设置为\"不优化\"，并在\"最近任务\"中锁定此进程，必要时还可隐藏进程。\n\n\t\t\t\t\t\t此程序为开源程序，不需要网络权限，不会收集或上传任何个人信息，请放心使用！</string>
     <string name="about_app_introduction">
         \"AD Killer\"可以帮助用户自动跳过一些应用的开屏广告，基于Android的无障碍服务实现。
         \n\n程序可以使用三种方法跳过开屏广告：

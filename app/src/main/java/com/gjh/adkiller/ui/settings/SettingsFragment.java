@@ -2,6 +2,7 @@ package com.gjh.adkiller.ui.settings;
 
 import static android.content.Context.WINDOW_SERVICE;
 
+import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -66,6 +67,23 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     Map<String, Set<PackageWidgetDescription>> mapActivityWidgets;
     Map<String, PackagePositionDescription> mapActivityPositions;
 
+
+    // 隐藏
+    public void showtaskbar (boolean show){
+
+        ActivityManager am = (ActivityManager) getActivity().getSystemService(Context.ACTIVITY_SERVICE);
+        if (am != null) {
+            List<ActivityManager.AppTask> tasks;
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                tasks = am.getAppTasks();
+                if (tasks != null && tasks.size() > 0) {
+                    tasks.get(0).setExcludeFromRecents(!show);
+                }
+            }
+        }
+    }
+
+
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.ad_killer_preference, rootKey);
@@ -128,6 +146,25 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 }
             });
         }
+
+
+        //hide 隐藏进程
+        CheckBoxPreference process = findPreference("skip_ad_process");
+        if(process != null) {
+            process.setChecked(mSetting.isbSkipAdProcess());
+            process.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    Boolean value = (Boolean) newValue;
+                    mSetting.setSkipAdProcess(value);
+
+                    showtaskbar(!value);
+
+                    return true;
+                }
+            });
+        }
+
 
 
         // 检测跳过广告按钮的关键字

@@ -112,6 +112,17 @@ public class Settings {
         }
     }
 
+    //hide process?-----  是否隐藏进程
+    private static final String SKIP_AD_PROCESS = "SKIP_AD_PROCESS";
+    private boolean bSkipAdProcess;
+    public boolean isbSkipAdProcess() { return bSkipAdProcess;}
+    public void setSkipAdProcess(boolean bSkipAdProcess) {
+        if(this.bSkipAdProcess != bSkipAdProcess) {
+            this.bSkipAdProcess = bSkipAdProcess;
+            mEditor.putBoolean(SKIP_AD_PROCESS, this.bSkipAdProcess);
+            mEditor.apply();
+        }
+    }
 
     // duration of skip ad process 跳过ad进程的持续时间
     private static final String SKIP_AD_DURATION = "SKIP_AD_DURATION";
